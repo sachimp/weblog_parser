@@ -2,5 +2,6 @@
 
 source "https://rubygems.org"
 gem 'minitest'
+gem 'test'
 
 # gem "rails"
