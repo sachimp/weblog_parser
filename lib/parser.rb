@@ -1,1 +1,3 @@
-puts "test"
+# frozen_string_literal: true
+
+puts 'test'
