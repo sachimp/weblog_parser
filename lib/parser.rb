@@ -8,10 +8,16 @@ log = File.open(file_name, 'r') do |f|
   f.read
 end
 
-# split the info along the spaces and make it into an array
-array = log.to_s.split
-
-#sort the array of strings into pairs (["page visit", "ip address"])
-pairs = array.each_slice(2) do |string|
-  p string
+def page_views(log)
+  array = log.to_s.split
+  page_names = []
+  pairs = array.each_slice(2) do |string_pair|
+    page_names << string_pair[0]
+  end
+  page_names.tally
 end
+
+def unique_page_views()
+end
+
+p page_views(log)
