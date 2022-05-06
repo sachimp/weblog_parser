@@ -17,7 +17,14 @@ def page_views(log)
   page_names.tally
 end
 
-def unique_page_views()
+def unique_page_views(log)
+  array = log.to_s.split
+  unique = array.each_slice(2).map.uniq do |string_pair|
+    string_pair
+  end
+  # unique_2 = unique.uniq
+  return unique.tally
 end
 
-p page_views(log)
+# p page_views(log)
+ p unique_page_views(log)
