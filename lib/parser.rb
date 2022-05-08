@@ -4,7 +4,7 @@
 
 file_name = File.join(__dir__, 'webserver.log')
 
-# open the log to read, store it in a global vairable
+# open the log to read, store it in a global vairable for any needed parsing
 
 LOG = File.open(file_name, 'r') do |f|
   f.read
