@@ -15,10 +15,10 @@ end
 def page_views(log)
   array = log.to_s.split
   page_names = []
-  pairs = array.each_slice(2) do |string_pair|
+  array.each_slice(2) do |string_pair|
     page_names << string_pair[0]
   end
-  display(page_names.tally.sort_by{|k, v| -v})
+  display(page_names.tally.sort_by { |_k, v| -v })
 end
 
 def unique_page_views(log)
@@ -29,7 +29,7 @@ def unique_page_views(log)
   pages = unique.tally.keys.map do |pair|
     pair[0]
   end
-  display(pages.tally.sort_by{|k, v| -v})
+  display(pages.tally.sort_by { |_k, v| -v })
 end
 
 # display method for a nicer list view in the terminal
