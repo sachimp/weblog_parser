@@ -42,7 +42,7 @@ class Parser
   end
 
   def log_to_array(file)
-    array = file.to_s.split
+    file.to_s.split
   end
 
   def find_unique_pairs(array)
