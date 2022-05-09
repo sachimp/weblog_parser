@@ -5,5 +5,7 @@ Uses Minitest for simple tests.
 
 ## Usage
 Run bundle install to install all required dependencies from the Gemfile.
+
 'Rake Run' (no quotes) runs the file.
+
 'Rake' runs the tests and linter.
