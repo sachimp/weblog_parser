@@ -6,9 +6,7 @@ file_name = File.join(__dir__, 'webserver.log')
 
 # open the log to read, store it in a global vairable for any needed parsing
 
-LOG = File.open(file_name, 'r') do |f|
-  f.read
-end
+LOG = File.open(file_name, 'r', &:read)
 
 # service object called with a file to parse, methods complete the appropriate tasks
 class Parser
