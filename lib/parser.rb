@@ -52,6 +52,8 @@ class Parser
   end
 end
 
+# show the output!
+
 test = Parser.new(LOG)
 test.all_page_views
 puts ''
